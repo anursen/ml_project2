@@ -6,12 +6,12 @@ HYPEN_E_DOT = "-e ."
 file_path = r"requirements.txt"
 
 
-def get_requirements():
+def get_requirements(file_path):
     """
     This function will return the list of reuqirements
     """
     requirements = []
-    with open(file_path,encoding="utf-8")) as file:
+    with open(file_path, "r", encoding="utf-8") as file:
         requirements = file.readlines()
         requirements = [required.replace("\n", "") for required in requirements]
 
@@ -28,5 +28,5 @@ setup(
     author="Abdurrahim Nursen",
     author_email="anurse007@gmail.com",
     packages=find_packages(),
-    install_requires=get_requirements(file_path),
+    install_requires=get_requirements("requirements.txt"),
 )
