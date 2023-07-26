@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 HYPEN_E_DOT = "-e ."
 
-file_path = r"requirements.txt"
+file_path = "requirements.txt"
 
 
 def get_requirements(file_path):
@@ -28,5 +28,5 @@ setup(
     author="Abdurrahim Nursen",
     author_email="anurse007@gmail.com",
     packages=find_packages(),
-    install_requires=get_requirements("requirements.txt"),
+    install_requires=get_requirements(file_path),
 )
